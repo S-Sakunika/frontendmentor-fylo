@@ -1,0 +1,387 @@
+/** Variables **/
+/** Mixins **/
+/** Base CSS **/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #181f2a; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  margin-bottom: 15px; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  margin-bottom: 15px; }
+
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  margin-bottom: 8px; }
+
+p {
+  line-height: 1.5em; }
+
+a {
+  text-decoration: none;
+  color: #65e2d9;
+  border-bottom: 1px solid #65e2d9;
+  padding-bottom: 3px; }
+
+ul, li {
+  margin: 0; }
+
+ul li, li li {
+  list-style: none; }
+
+img {
+  width: auto;
+  max-width: 100%; }
+
+/** General CSS **/
+.container {
+  padding: 20px; }
+
+.grid-row {
+  display: flex;
+  flex-wrap: wrap; }
+
+.grid-col-12 {
+  flex: 100%;
+  max-width: 100%; }
+
+.grid-col-11 {
+  flex: 91.66%;
+  max-width: 91.66%; }
+
+.grid-col-10 {
+  flex: 83.33%;
+  max-width: 83.33%; }
+
+.grid-col-9 {
+  flex: 75%;
+  max-width: 75%; }
+
+.grid-col-8 {
+  flex: 66.66%;
+  max-width: 66.66%; }
+
+.grid-col-7 {
+  flex: 58.33%;
+  max-width: 58.33%; }
+
+.grid-col-6 {
+  flex: 50%;
+  max-width: 50%; }
+
+.grid-col-5 {
+  flex: 41.66%;
+  max-width: 41.66%; }
+
+.grid-col-4 {
+  flex: 33.33%;
+  max-width: 33.33%; }
+
+.grid-col-3 {
+  flex: 25%;
+  max-width: 25%; }
+
+.grid-col-2 {
+  flex: 16.66%;
+  max-width: 16.66%; }
+
+.grid-col-1 {
+  flex: 8.333%;
+  max-width: 8.333%; }
+
+.button {
+  background: linear-gradient(45deg, #65e2d9, #339ecc);
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  border-radius: 50px;
+  font-weight: 600; }
+
+/** Page Top CSS **/
+.page-top {
+  background: #1c2431; }
+
+.page-top .container {
+  padding: 60px 50px; }
+
+.logo {
+  margin-left: 30px; }
+
+.navigation-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center; }
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; }
+  nav ul li {
+    margin: 0 30px; }
+    nav ul li a {
+      font-family: "Raleway", sans-serif;
+      color: #fff;
+      border: none;
+      padding: 0; }
+
+/** Intro Section CSS **/
+#intro {
+  text-align: center;
+  background: url(images/bg-curvy-desktop.svg) no-repeat 100% 100%/contain #1c2431; }
+  #intro .intro-text {
+    margin: 30px 0;
+    padding-bottom: 195px; }
+    #intro .intro-text p {
+      max-width: 550px;
+      margin: 35px auto 30px;
+      font-size: 18px; }
+    #intro .intro-text a.button {
+      background: linear-gradient(45deg, #65e2d9, #339ecc);
+      color: #fff;
+      font-family: "Raleway", sans-serif;
+      border-radius: 50px;
+      font-weight: 600;
+      padding: 18px 30px;
+      min-width: 200px;
+      display: inline-block; }
+
+/** Feature Section CSS **/
+#features {
+  margin-top: -100px; }
+  #features .features-wrapper {
+    max-width: 900px;
+    margin: 0 auto; }
+    #features .features-wrapper .feature-box {
+      text-align: center;
+      padding: 40px 60px; }
+      #features .features-wrapper .feature-box p {
+        font-size: 13px; }
+      #features .features-wrapper .feature-box .icon-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+        margin-bottom: 20px; }
+
+/** Productive Section CSS **/
+#productive {
+  margin: 60px 0; }
+  #productive .col-left-wrapper {
+    padding: 0 30px 0 80px; }
+  #productive .col-right-wrapper {
+    padding: 0 80px 0 30px; }
+  #productive .right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    #productive .right p {
+      margin: 15px 0; }
+    #productive .right a {
+      margin-top: 6px;
+      display: inline-block; }
+      #productive .right a img {
+        margin: 0 0 -4px 2px; }
+
+/** Testimonial Section CSS **/
+#testimonials {
+  margin: 80px 0 250px; }
+  #testimonials .testimonial-wrapper {
+    background: url("images/core-img/bg-quotes.png") no-repeat 10px 0;
+    width: 88%;
+    margin: 0 auto;
+    padding: 35px 0; }
+    #testimonials .testimonial-wrapper .testimonial {
+      background: #1c2431;
+      margin: 0 20px;
+      padding: 30px;
+      box-shadow: 8px 3px 4px 5px #1b232ea6;
+      border-radius: 5px; }
+      #testimonials .testimonial-wrapper .testimonial p {
+        font-size: 13px;
+        margin: 10px 0; }
+      #testimonials .testimonial-wrapper .testimonial .author {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+        #testimonials .testimonial-wrapper .testimonial .author img {
+          border-radius: 50%;
+          width: 25px; }
+        #testimonials .testimonial-wrapper .testimonial .author .author-details {
+          margin-left: 8px; }
+        #testimonials .testimonial-wrapper .testimonial .author .name {
+          font-size: 11px; }
+        #testimonials .testimonial-wrapper .testimonial .author .designation {
+          font-size: 8px; }
+        #testimonials .testimonial-wrapper .testimonial .author span {
+          display: block; }
+
+/** Signup Section CSS **/
+#signup {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  #signup .signup-box {
+    background: #1c2431;
+    position: absolute;
+    width: 100%;
+    max-width: 768px;
+    top: -140px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 6px 5px 10px 3px #00000026; }
+    #signup .signup-box p {
+      font-size: 13px;
+      margin: 20px auto;
+      width: 80%; }
+    #signup .signup-box .button.small {
+      background: linear-gradient(45deg, #65e2d9, #339ecc);
+      color: #fff;
+      font-family: "Raleway", sans-serif;
+      border-radius: 50px;
+      font-weight: 600;
+      padding: 15px 30px;
+      border: none;
+      margin-left: 30px; }
+    #signup .signup-box .signup-form {
+      margin-top: 40px; }
+      #signup .signup-box .signup-form form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; }
+        #signup .signup-box .signup-form form input {
+          width: 50%;
+          padding: 10px 40px;
+          border-radius: 50px;
+          border: none; }
+        #signup .signup-box .signup-form form input:active {
+          border: none; }
+
+/** Footer CSS **/
+#footer {
+  background: #0b1523; }
+  #footer .container {
+    padding: 200px 100px 100px; }
+  #footer .footer-logo {
+    margin-bottom: 30px; }
+  #footer a {
+    color: #fff;
+    border: none; }
+  #footer .social-links {
+    text-align: right; }
+    #footer .social-links a {
+      border: 1px solid #fff !important;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      padding: 2px;
+      margin: 0 4px; }
+    #footer .social-links a:last-child {
+      margin: 0; }
+  #footer .sub-links {
+    display: flex;
+    flex-wrap: wrap; }
+    #footer .sub-links ul {
+      width: 50%; }
+      #footer .sub-links ul li {
+        margin-bottom: 15px; }
+  #footer .contact {
+    display: flex; }
+    #footer .contact .icon-wrapper {
+      max-width: 40px;
+      flex: 40px; }
+  #footer .contact.location span {
+    width: 80%;
+    line-height: 1.5em; }
+  #footer .contact.phone span, #footer .contact.email span {
+    font-size: 13px;
+    margin-bottom: 15px; }
+
+/** Responsive CSS **/
+@media (max-width: 768px) {
+  .grid-col-6, .grid-col-4, .grid-col-3, .grid-col-2 {
+    max-width: 100%;
+    flex: 100%; }
+
+  .page-top .grid-col-6 {
+    max-width: 50% !important;
+    flex: 50% !important; }
+
+  #signup .signup-box {
+    top: -190px;
+    max-width: 335px; }
+    #signup .signup-box .signup-form form input {
+      width: 100%;
+      min-height: 26px; }
+    #signup .signup-box .button {
+      margin: 20px 0 0 0 !important;
+      width: 100%; }
+
+  #productive .right {
+    margin-top: 50px; }
+
+  #testimonials .testimonial-wrapper .testimonial {
+    margin: 0 20px 30px; }
+
+  #footer .container {
+    padding: 250px 100px 100px; }
+  #footer .sub-links {
+    margin: 30px 0; }
+  #footer .social-links {
+    text-align: center; }
+  #footer .contact.location {
+    margin-bottom: 15px; } }
+@media (max-width: 480px) {
+  .page-top .container {
+    padding: 30px 20px; }
+
+  .logo {
+    margin-left: 0;
+    width: 110px; }
+
+  nav ul li {
+    margin: 0 8px; }
+
+  #intro .intro-text {
+    padding-bottom: 75px; }
+  #intro .container {
+    padding: 30px; }
+
+  #productive h1 {
+    font-size: 18px; }
+  #productive .col-right-wrapper {
+    padding: 0 20px 0; }
+
+  #signup .signup-box {
+    max-width: 310px;
+    padding: 40px 20px; }
+
+  #footer .container {
+    padding: 270px 30px 60px; }
+  #footer .sub-links ul {
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

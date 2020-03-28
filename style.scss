@@ -1,0 +1,474 @@
+/** Variables **/
+$fyPrimaryColor1: #181f2a;
+$fyPrimaryColor2: #1c2431;
+$fyPrimaryColor3: #0b1523;
+$fyPrimaryColor4: #202a3c;
+$fySecondaryColor1: #65e2d9;
+$fySecondaryColor2: #339ecc;
+$fyPrimaryFontColor: #fff;
+$fyMaxWidth: 1440px;
+$fyfontFamily1: 'Raleway', sans-serif;
+$fyfontFamily2: 'Open Sans', sans-serif;
+$fyFontSize: 14px;
+$fyFontWeight: 400;
+
+/** Mixins **/
+@mixin flex-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@mixin headings {
+  font-family: $fyfontFamily1;
+}
+@mixin button {
+  background: linear-gradient(45deg, $fySecondaryColor1, $fySecondaryColor2);
+  color: #fff;
+  font-family: $fyfontFamily1;
+  border-radius: 50px;
+  font-weight: 600;
+}
+@mixin button-large { 
+  @include button;
+  padding: 18px 30px;
+  min-width: 200px;
+}
+@mixin button-small { 
+  @include button;
+  padding: 15px 30px;
+}
+
+/** Base CSS **/
+* {
+  margin: 0;
+  padding: 0; 
+}
+body {
+  width: 100%;
+  max-width: $fyMaxWidth;
+  margin: 0 auto;
+  font-family: $fyfontFamily2;
+  font-size: $fyFontSize;
+  font-weight: $fyFontWeight;
+  color: $fyPrimaryFontColor;
+  background-color: $fyPrimaryColor1; 
+}
+h1 {
+  @include headings;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+h2 {
+  @include headings;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+h6 {
+  @include headings;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+p {
+  line-height: 1.5em; 
+}
+a {
+  text-decoration: none;
+  color: $fySecondaryColor1; 
+  border-bottom: 1px solid $fySecondaryColor1;
+  padding-bottom: 3px;
+}
+ul, li {
+  margin: 0; 
+}
+ul li, li li {
+  list-style: none; 
+}
+img {
+  width: auto;
+  max-width: 100%; 
+}
+
+/** General CSS **/
+.container {
+  padding: 20px; 
+}
+.grid-row {
+  display: flex;
+  flex-wrap: wrap; 
+}
+.grid-col-12 {
+  flex: 100%;
+  max-width: 100%; 
+}
+.grid-col-11 {
+  flex: 91.66%;
+  max-width: 91.66%; 
+}
+.grid-col-10 {
+  flex: 83.33%;
+  max-width: 83.33%; 
+}
+.grid-col-9 {
+  flex: 75%;
+  max-width: 75%; 
+}
+.grid-col-8 {
+  flex: 66.66%;
+  max-width: 66.66%; 
+}
+.grid-col-7 {
+  flex: 58.33%;
+  max-width: 58.33%; 
+}
+.grid-col-6 {
+  flex: 50%;
+  max-width: 50%; 
+}
+.grid-col-5 {
+  flex: 41.66%;
+  max-width: 41.66%; 
+}
+.grid-col-4 {
+  flex: 33.33%;
+  max-width: 33.33%; 
+}
+.grid-col-3 {
+  flex: 25%;
+  max-width: 25%; 
+}
+.grid-col-2 {
+  flex: 16.66%;
+  max-width: 16.66%; 
+}
+.grid-col-1 {
+  flex: 8.333%;
+  max-width: 8.333%; 
+}
+.button {
+  @include button;
+}
+
+/** Page Top CSS **/
+.page-top {
+  background : $fyPrimaryColor2;
+}
+.page-top .container {
+  padding: 60px 50px;
+}
+.logo {
+  margin-left: 30px;
+}
+.navigation-wrapper {
+  @include flex-right;
+  align-items: center;
+}
+nav ul {
+  @include flex-right;
+  li {
+    margin: 0 30px;
+    a {
+     font-family: $fyfontFamily1;
+     color: $fyPrimaryFontColor;
+     border: none;
+     padding: 0;
+    }
+  }
+}
+
+/** Intro Section CSS **/
+#intro {
+  text-align: center;
+  background: url(images/bg-curvy-desktop.svg) no-repeat 100% 100% /contain $fyPrimaryColor2;
+  .intro-text {
+    margin: 30px 0;
+    padding-bottom: 195px;
+    p {
+      max-width: 550px;
+      margin: 35px auto 30px;
+      font-size: 18px;
+    }
+    a.button {
+      @include button-large;
+      display: inline-block;
+    }
+  }
+}
+
+/** Feature Section CSS **/
+#features {
+  margin-top: -100px;
+  .features-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    .feature-box {
+      text-align: center;
+      padding: 40px 60px;
+      p {
+        font-size: 13px;
+      }
+      .icon-wrapper {
+        @include flex-center;
+        min-height: 100px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/** Productive Section CSS **/
+#productive {
+  margin: 60px 0;
+  .col-left-wrapper {
+    padding: 0 30px 0 80px;
+  }
+  .col-right-wrapper {
+    padding: 0 80px 0 30px;
+  }
+  .right {
+    @include flex-center;
+    p {
+      margin: 15px 0;
+    }
+    a {
+      margin-top: 6px;
+      display: inline-block;
+      img {
+        margin: 0 0 -4px 2px;
+      }
+    }
+  }
+}
+
+/** Testimonial Section CSS **/
+#testimonials {
+  margin: 80px 0 250px; 
+  .testimonial-wrapper {
+    background: url("images/core-img/bg-quotes.png") no-repeat 10px 0;
+    width: 88%;
+    margin: 0 auto;
+    padding: 35px 0;
+    .testimonial {
+      background: $fyPrimaryColor2;
+      margin: 0 20px;
+      padding: 30px;
+      box-shadow: 8px 3px 4px 5px #1b232ea6;
+      border-radius: 5px;
+      p {
+        font-size: 13px;
+        margin: 10px 0;
+      }
+      .author {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+          border-radius: 50%;
+          width: 25px;
+        }
+        .author-details {
+          margin-left: 8px;
+        }
+        .name {
+          font-size: 11px;
+        }
+        .designation {
+          font-size: 8px;
+        }
+        span {
+         display: block;
+        }
+      }
+    }
+  }
+}
+
+/** Signup Section CSS **/
+#signup {
+  position: relative;
+  @include flex-center;
+  .signup-box {
+    background: $fyPrimaryColor2; 
+    position: absolute;
+    width: 100%;
+    max-width: 768px;
+    top: -140px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 6px 5px 10px 3px #00000026;
+    p {
+      font-size: 13px;
+      margin: 20px auto;
+      width: 80%;
+    }
+    .button.small {
+      @include button-small;
+      border: none;
+      margin-left: 30px;
+    }
+    .signup-form {
+      margin-top: 40px;
+      form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        input {
+          width: 50%;
+          padding: 10px 40px;
+          border-radius: 50px;
+          border: none;
+        }
+        input:active {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+/** Footer CSS **/
+#footer {
+  background: $fyPrimaryColor3;
+  .container {
+    padding: 200px 100px 100px;
+  }
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+  a {
+    color: $fyPrimaryFontColor;
+    border:none;
+  }
+  .social-links {
+    text-align: right;
+    a {
+      border: 1px solid $fyPrimaryFontColor !important;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      padding: 2px;
+      margin: 0 4px;
+    }
+    a:last-child {
+      margin: 0;
+    }
+  }
+  .sub-links {
+    display: flex;
+    flex-wrap: wrap;
+    ul {
+      width: 50%;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    .icon-wrapper {
+      max-width: 40px;
+      flex: 40px;
+    }
+  }
+  .contact.location span {
+    width: 80%;
+    line-height: 1.5em;
+  }
+  .contact.phone span, .contact.email span {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+}
+
+/** Responsive CSS **/
+@media (max-width: 768px) {
+  .grid-col-6, .grid-col-4, .grid-col-3, .grid-col-2 {
+    max-width: 100%;
+    flex: 100%;
+  }
+  .page-top .grid-col-6 {
+    max-width: 50% !important;
+    flex: 50% !important;
+  }
+  #signup .signup-box {
+    top: -190px;
+    max-width: 335px;
+    .signup-form form input {
+      width: 100%;
+      min-height: 26px;
+    }
+    .button {
+      margin: 20px 0 0 0 !important;
+      width: 100%;
+    }
+  }
+  #productive .right {
+    margin-top: 50px;
+  }
+  #testimonials .testimonial-wrapper .testimonial {
+    margin: 0 20px 30px;
+  }
+  #footer {
+    .container {
+      padding: 250px 100px 100px;
+    }
+    .sub-links {
+     margin: 30px 0;
+    }
+    .social-links {
+      text-align: center;
+    }
+    .contact.location {
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .page-top .container {
+    padding: 30px 20px;
+  }
+  .logo {
+    margin-left: 0;
+    width: 110px;
+  }
+  nav ul li {
+    margin: 0 8px;
+  }
+  #intro {
+    .intro-text {
+      padding-bottom: 75px;
+    }
+    .container {
+      padding: 30px;
+    }
+  }
+  #productive {
+    h1 {
+      font-size: 18px;
+    }
+    .col-right-wrapper {
+      padding: 0 20px 0;
+    }
+  }
+  #signup .signup-box {
+    max-width: 310px;
+    padding: 40px 20px;
+  }
+  #footer {
+    .container {
+      padding: 270px 30px 60px;
+    }
+    .sub-links ul {
+     width: 100%;
+    }
+  }
+}
