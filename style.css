@@ -37,7 +37,11 @@ a {
   text-decoration: none;
   color: #65e2d9;
   border-bottom: 1px solid #65e2d9;
-  padding-bottom: 3px; }
+  padding-bottom: 3px;
+  transition: border 300ms ease-out; }
+
+a:hover, a:focus {
+  border-bottom: 1px solid transparent; }
 
 ul, li {
   margin: 0; }
@@ -110,7 +114,11 @@ img {
   color: #fff;
   font-family: "Raleway", sans-serif;
   border-radius: 50px;
-  font-weight: 600; }
+  font-weight: 600;
+  transition: opacity 300ms ease-out; }
+
+.button:hover, .button:focus {
+  opacity: 0.8; }
 
 /** Page Top CSS **/
 .page-top {
@@ -137,8 +145,11 @@ nav ul {
     nav ul li a {
       font-family: "Raleway", sans-serif;
       color: #fff;
-      border: none;
-      padding: 0; }
+      padding: 0 0 3px 0;
+      border-bottom: 1px solid transparent;
+      transition: border 300ms ease-out; }
+    nav ul li a:hover, nav ul li a:focus {
+      border-bottom: 1px solid #fff; }
 
 /** Intro Section CSS **/
 #intro {
@@ -157,6 +168,7 @@ nav ul {
       font-family: "Raleway", sans-serif;
       border-radius: 50px;
       font-weight: 600;
+      transition: opacity 300ms ease-out;
       padding: 18px 30px;
       min-width: 200px;
       display: inline-block; }
@@ -260,6 +272,7 @@ nav ul {
       font-family: "Raleway", sans-serif;
       border-radius: 50px;
       font-weight: 600;
+      transition: opacity 300ms ease-out;
       padding: 15px 30px;
       border: none;
       margin-left: 30px; }
@@ -273,9 +286,8 @@ nav ul {
           width: 50%;
           padding: 10px 40px;
           border-radius: 50px;
-          border: none; }
-        #signup .signup-box .signup-form form input:active {
-          border: none; }
+          border: none;
+          outline: none; }
 
 /** Footer CSS **/
 #footer {
@@ -286,7 +298,10 @@ nav ul {
     margin-bottom: 30px; }
   #footer a {
     color: #fff;
-    border: none; }
+    border-bottom: 1px solid transparent;
+    transition: border 300ms ease-out; }
+  #footer a:hover, #footer a:focus {
+    border-bottom: 1px solid #fff; }
   #footer .social-links {
     text-align: right; }
     #footer .social-links a {
@@ -298,9 +313,14 @@ nav ul {
       width: 24px;
       height: 24px;
       padding: 2px;
-      margin: 0 4px; }
+      margin: 0 4px;
+      background-color: transparent;
+      transition: background-color 300ms ease-out, color 300ms ease-out; }
     #footer .social-links a:last-child {
       margin: 0; }
+    #footer .social-links a:hover, #footer .social-links a:focus {
+      background-color: #fff;
+      color: #0b1523; }
   #footer .sub-links {
     display: flex;
     flex-wrap: wrap; }
@@ -327,8 +347,8 @@ nav ul {
     flex: 100%; }
 
   .page-top .grid-col-6 {
-    max-width: 50% !important;
-    flex: 50% !important; }
+    max-width: 50%;
+    flex: 50%; }
 
   #signup .signup-box {
     top: -190px;
@@ -355,6 +375,23 @@ nav ul {
   #footer .contact.location {
     margin-bottom: 15px; } }
 @media (max-width: 480px) {
+  h1 {
+    font-size: 30px; }
+
+  h2 {
+    font-size: 25px; }
+
+  .grid-col-6 {
+    max-width: 100% !important;
+    flex: 100% !important; }
+
+  .page-top {
+    text-align: center; }
+
+  .navigation-wrapper {
+    justify-content: center;
+    margin-top: 20px; }
+
   .page-top .container {
     padding: 30px 20px; }
 
